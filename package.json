@@ -1,0 +1,26 @@
+{
+  "name": "spotify-authentication-server",
+  "version": "1.0.0",
+  "description": "Spotify Auth Server",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Garret Bever",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "1.3.2",
+    "core-js": "^2.4.1",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "querystring": "~0.2.0",
+    "request": "~2.34.0"
+  },
+  "devDependencies": {
+    "typescript": "~2.0.10",
+    "@types/node": "^6.0.46",
+    "@types/jasmine": "^2.5.36"
+  },
+  "repository": {}
+}
