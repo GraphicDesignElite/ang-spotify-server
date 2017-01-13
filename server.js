@@ -12,6 +12,10 @@ const app = express();
 var cors = require('cors');
 app.use(cors());
 
+//load env variables
+var dotenv = require('dotenv');
+dotenv.load();
+
 // Parsers for POST data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,12 +28,12 @@ const api = require('./server/routes/api');
 app.use('/api', api);
 
 
-const siteURL = "http://localhost:3000";
-const apiURL = "http://localhost:5000";
+const siteURL = process.env.SITE_URL_ID || "http://localhost:3000";
+const apiURL = process.env.API_URL || "http://localhost:5000";
 
 /* Spotify Routes */
-var client_id = 'insert yours'; // Your client id
-var client_secret = 'insert yours'; // Your secret
+var client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+var client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
 var redirect_uri = apiURL + '/callback'; // Your redirect uri
 var access;
   /**

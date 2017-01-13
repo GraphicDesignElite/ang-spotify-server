@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Spotify Auth Server",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "setup": "node setup.js"
   },
   "keywords": [],
   "author": "Garret Bever",
@@ -13,6 +14,7 @@
     "cookie-parser": "1.3.2",
     "core-js": "^2.4.1",
     "cors": "^2.8.1",
+    "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "querystring": "~0.2.0",
     "request": "~2.34.0"
